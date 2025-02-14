@@ -216,3 +216,19 @@
 **[PostMan Workspace](https://www.postman.com/dbereiter/workspace/yandex-prilavok "Great n Awful! It's getting better, but not quite yet!")**
 
 ------------------------------------------------------------
+
+# Работа с базами данных
+
+
+
+## Спринт 6. 🚧 Under construction
+
+<details>
+  <summary><b>Постановка задачи</b></summary>
+<!-- have to be followed by an empty line! -->
+
+
+
+</details>
+
+------------------------------------------------------------
