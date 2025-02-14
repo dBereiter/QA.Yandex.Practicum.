@@ -1,4 +1,4 @@
-# Yandex.Practicum
+# [Yandex.Practicum](https://practicum.yandex.ru/qa-engineer/?from=catalog)
 _MiniHome 4 Pets by YaPracticum_
 
 ## Тестирование Яндекс Маршрутов
@@ -9,6 +9,12 @@ _MiniHome 4 Pets by YaPracticum_
 
 - валидацию полей ввода времени и адресов
 - логику расчета стоимости и времени поездки на собственном автомобиле.
+
+---
+
+**[Отчет о проделанной работе](https://docs.google.com/spreadsheets/d/1rPtklzV4vVwa0srp6z7xW0EvaIXAmYgczDHL7cXoCxE/edit?usp=sharing "Great n Awful! Fst try, no more yet!")**
+
+---
 
 ♻️ Для проекта понадобится:
 
