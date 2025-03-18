@@ -227,7 +227,20 @@
   <summary><b>Постановка задачи</b></summary>
 <!-- have to be followed by an empty line! -->
 
+![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
 
+В проекте нужно проанализировать данные о фондах и инвестициях и написать запросы к базе
+
+No. | Задача | Код запроса
+--- | --- | ---
+1 | Посчитай, сколько компаний закрылось |<pre lang="SQL">SELECT count(status) Closed_Company &#13;FROM company &#13;WHERE status = 'closed';</pre>|
+2 | Отобрази количество привлечённых средств для новостных компаний США. Используй данные из таблицы `company`. Отсортируй таблицу по убыванию значений в поле `funding_total`|<pre lang="SQL">SELECT funding_total &#13;FROM company &#13;WHERE country_code = 'USA' and category_code = 'news' &#13;ORDER BY funding_total desc;</pre>|
+3 | Отобрази имя, фамилию и названия аккаунтов людей в поле `network_username`, которые начинаются на `Silver` |<pre lang="SQL">SELECT first_name, last_name, network_username&#13;FROM people&#13;WHERE network_username like 'Silver%';</pre>|
+4 | Выведи на экран всю информацию о людях, у которых названия аккаунтов в поле `network_username` содержат подстроку `money`, а фамилия начинается на `K` |<pre lang="SQL">SELECT * &#13;FROM people &#13;WHERE network_username like '%money%' AND last_name like 'K%'</pre>|
+5 | Для каждой страны отобрази общую сумму привлечённых инвестиций, которые получили компании, зарегистрированные в этой стране. Страну, в которой зарегистрирована компания, можно определить по коду страны. Отсортируй данные по убыванию суммы |<pre lang="SQL">SELECT country_code, sum(funding_total) AS sum &#13;FROM company &#13;GROUP BY country_code &#13;ORDER BY sum desc;</pre>|
+6 | Отобрази имя и фамилию всех сотрудников стартапов. Добавь поле с названием учебного заведения, которое окончил сотрудник, если эта информация известна |<pre lang="SQL">SELECT p.first_name, p.last_name, e.instituition &#13;FROM people AS p &#13;LEFT OUTER JOIN education AS e ON p.id=e.person_id;</pre>|
+7 | Найди общую сумму сделок по покупке одних компаний другими в долларах. Отбери сделки, которые осуществлялись только за наличные с 2011 по 2013 год включительно |<pre lang="SQL">SELECT sum(price_amount) &#13;FROM acquisition &#13;WHERE term_code = 'cash' &#13;      AND extract(year from acquired_at) BETWEEN 2011 and 2013;</pre>|
+8 | Выясни, в каких странах находятся фонды, которые чаще всего инвестируют в стартапы. Для каждой страны посчитай минимальное, максимальное и среднее число компаний, в которые инвестировали фонды этой страны, основанные с 2010 по 2012 год включительно. Исключи страны с фондами, у которых минимальное число компаний, получивших инвестиции, равно нулю. Выгрузи десять самых активных стран-инвесторов: отсортируй таблицу по среднему количеству компаний от большего к меньшему. Затем добавь сортировку по коду страны в лексикографическом порядке |<pre lang="SQL">SELECT country_code, &#13;       min(invested_companies), &#13;       max(invested_companies), &#13;       avg(invested_companies) AS avgc &#13;FROM fund &#13;WHERE extract(year from founded_at) BETWEEN 2010 and 2012 &#13;GROUP BY country_code &#13;HAVING min(invested_companies) > 0 &#13;ORDER BY avgc DESC, country_code &#13;LIMIT 10;</pre>|
 
 </details>
 
