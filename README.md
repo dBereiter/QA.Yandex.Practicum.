@@ -61,9 +61,7 @@
 
 </details>
 
-**[Отчет о проделанной работе](https://docs.google.com/spreadsheets/d/1rPtklzV4vVwa0srp6z7xW0EvaIXAmYgczDHL7cXoCxE/edit?usp=sharing "Great n Awful! Fst try, no more yet!")**
-
-
+**[Отчет о проделанной работе](Part.I.Web/Sprint.II/Web_Sprint_II_print_preview_ver.pdf "Great n Awful! Fst try, no more yet!")**
 
 ## Спринт 3. Тестирование UI
 
