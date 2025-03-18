@@ -227,7 +227,7 @@
   <summary><b>Постановка задачи</b></summary>
 <!-- have to be followed by an empty line! -->
 
-![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+
 
 В проекте нужно проанализировать данные о фондах и инвестициях и написать запросы к базе
 
