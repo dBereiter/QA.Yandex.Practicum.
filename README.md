@@ -219,14 +219,14 @@
 
 В проекте нужно проанализировать данные о фондах и инвестициях и написать запросы к базе
 
-![Диаграмма отношений сущностей](Part.III.API/Sprint.VI/YP_sql_project_ERD.png "Great n Awful! It's getting better, but not quite yet!")
+![Диаграмма отношений сущностей](Part.III.API/Sprint.VI/YP_sql_project_ERD.png)
   > Источник https://practicum.yandex.ru/
 
 Таблица с примерами запросов
 
 No. | Задача | Код запроса
---- | --- | ---
-1 | Посчитай, сколько компаний закрылось<br> |<pre lang="SQL">SELECT count(status) Closed_Company &#13;FROM company &#13;WHERE status = 'closed';</pre>|
+:---: | :--- | :---
+1 | Посчитай, сколько компаний закрылось |<pre lang="SQL">SELECT count(status) Closed_Company &#13;FROM company &#13;WHERE status = 'closed';</pre>|
 2 | Отобрази количество привлечённых средств для новостных компаний США. Используй данные из таблицы `company`. Отсортируй таблицу по убыванию значений в поле `funding_total`|<pre lang="SQL">SELECT funding_total &#13;FROM company &#13;WHERE country_code = 'USA' and category_code = 'news' &#13;ORDER BY funding_total desc;</pre>|
 3 | Отобрази имя, фамилию и названия аккаунтов людей в поле `network_username`, которые начинаются на `Silver` |<pre lang="SQL">SELECT first_name, last_name, network_username&#13;FROM people&#13;WHERE network_username like 'Silver%';</pre>|
 4 | Выведи на экран всю информацию о людях, у которых названия аккаунтов в поле `network_username` содержат подстроку `money`, а фамилия начинается на `K` |<pre lang="SQL">SELECT * &#13;FROM people &#13;WHERE network_username like '%money%' AND last_name like 'K%'</pre>|
