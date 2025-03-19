@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------
 
-# Тестирование Web
+# Часть I - Тестирование Web
 Работа проводилась на тестовом стенде веб приложения Яндекс.Маршруты
 
 Яндекс Маршруты — сервис, который строит маршруты для транспорта разных видов, рассчитывает время и стоимость поездки.
@@ -61,7 +61,7 @@
 
 </details>
 
-**[Отчет о проделанной работе](Part.I.Web/Sprint.II/Web_Sprint_II_print_preview_ver.pdf "Great n Awful! Fst try, no more yet!")**
+**[Отчет о проделанной работе](Part.I.Web/Sprint.II/Web_Sprint_II_print_preview_ver.pdf "Можно скачать в формате XLSX - Part.I.Web/Sprint.II/Working_Table_rev3.xlsx =)")**
 
 ## Спринт 3. Тестирование UI
 
@@ -107,13 +107,13 @@
 
 </details>
 
-**[Отчет о проделанной работе](https://docs.google.com/document/d/1TlC_ecmTByEZ-XKKyXtTrVpHk7k6XZO9iTyYuBcZRxI/edit?usp=sharing "Great n Awful! Not bad, but it could be better!")**
+**[Отчет о проделанной работе](Part.I.Web/Sprint.III/Отчет_3-й_спринт_(рев.2).pdf "Great n Awful! Not bad, but it could be better!")**
 
-**[Рабочая таблица](https://docs.google.com/spreadsheets/d/1YeSiBaMFXAMtK5cnTTfJC6jQGnseuI2Sf6QTS5tOuRc/edit?usp=sharing "Great n Awful! Not bad, but it could be better!")**
+**[Рабочая таблица](Part.I.Web/Sprint.III/Web_Sprint_III_print_preview_ver.pdf "Можно скачать в формате XLSX - Part.I.Web/Sprint.III/Рабочая_таблица_3-й спринт_ревизия2.xlsx =)")**
 
 ------------------------------------------------------------
 
-# Тестирование мобильных приложений
+# Часть II - Тестирование мобильных приложений
 
 Работа проводилась на тестовом стенде мобильного приложения Яндекс.Метро версии 3.6
 Тестировние выполнена на эмуляторе в Android Studio 2024.2.2. 
@@ -163,15 +163,13 @@
 
 </details>
 
-**[Отчет о проделанной работе](https://docs.google.com/document/d/18LqVuiEKu52e5cdX8aXX_nGR-hTPQ4vvOwVB8K9eF74/edit?usp=sharing "Great n Awful! It's getting better, but not quite yet!")**
+**[Отчет о проделанной работе](Part.II.Mobile/Sprint.IIII/Отчет_4-ый_спринт_(рев.2).pdf "Great n Awful! It's getting better, but not quite yet!")**
 
-**[Рабочая таблица](https://docs.google.com/spreadsheets/d/1bxBks-xDVpMala9RfgjdNH9XJlbb2-z0wi1iZhD2HaY/edit?usp=sharing "Great n Awful! It's getting better, but not quite yet!")**
+**[Рабочая таблица](Part.II.Mobile/Sprint.IIII/Mobile_Sprint_IIII_print_preview_ver.pdf "Можно скачать в формате XLSX - Part.II.Mobile/Sprint.IIII/Рабочая_таблица_4-й_спринт_ревизия2.xlsx =)")**
 
 ------------------------------------------------------------
 
-# Тестирование API
-
-
+# Часть III - Тестирование API
 
 ## Спринт 5. Яндекс.Прилавок
 
@@ -207,27 +205,24 @@
 
 </details>
 
-**[Отчет о проделанной работе](https://docs.google.com/document/d/1PQSIRLaU5UiDtsgYHBS4c_NxDUtTO_K2af6DNxvMQck/edit?usp=sharing "Great n Awful! It's getting better, but not quite yet!")**
+**[Отчет о проделанной работе](Part.III.API/Sprint.V/Отчет_5-ый_спринт_(рев.2).pdf "Great n Awful! It's getting better, but not quite yet!")**
 
-**[Рабочая таблица](https://docs.google.com/spreadsheets/d/1EAfPeJPZEsElbvVbjfmJZUwxFhhuDJjdbAmlHiUEnNo/edit?usp=sharing "Great n Awful! It's getting better, but not quite yet!")**
+**[Рабочая таблица](Part.III.API/Sprint.V/API_Sprint_V_print_preview_ver.pdf "Можно скачать в формате XLSX - Part.III.API/Sprint.V/Рабочая_таблица_5-й_спринт_ревизия2.xlsx =)")**
 
 **[PostMan Workspace](https://www.postman.com/dbereiter/workspace/yandex-prilavok "Great n Awful! It's getting better, but not quite yet!")**
 
-------------------------------------------------------------
-
-# Работа с базами данных
-
-
-
-## Спринт 6. 🚧 Under construction
+## Спринт 6. Работа с базами данных
 
 <details>
   <summary><b>Постановка задачи</b></summary>
 <!-- have to be followed by an empty line! -->
 
-
-
 В проекте нужно проанализировать данные о фондах и инвестициях и написать запросы к базе
+
+![Диаграмма отношений сущностей](Part.III.API/Sprint.VI/YP_sql_project_ERD.png "Great n Awful! It's getting better, but not quite yet!")
+  > Источник https://practicum.yandex.ru/
+
+Таблица с примерами запросов
 
 No. | Задача | Код запроса
 --- | --- | ---
