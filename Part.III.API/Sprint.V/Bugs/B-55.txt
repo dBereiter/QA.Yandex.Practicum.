@@ -1,0 +1,23 @@
+Query:
+
+curl --location 'https://783f4d3d-08f0-42d4-9e90-849ec806750c.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml' \
+--header 'Content-Type: application/xml' \
+--data '<InputModel>
+    <productsCount>11</productsCount>
+    <productsWeight>4</productsWeight>
+    <deliveryTime>-9</deliveryTime>
+</InputModel>'
+
+===============================
+
+POST /fast-delivery/v3.1.1/calculate-delivery.xml
+
+-------------------------------
+200 Ok
+-------------------------------
+
+Query Response
+
+<response name="Привезём быстро"/>
+
+===============================

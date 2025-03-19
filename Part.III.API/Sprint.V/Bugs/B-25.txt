@@ -1,0 +1,36 @@
+Query:
+
+curl --location --request DELETE 'https://d53c667d-2d37-40af-af8f-41fb035d7dea.serverhub.praktikum-services.ru/api/v1/orders/3' 
+
+===============================
+
+DELETE /api/v1/orders/3
+
+-------------------------------
+404 Not Found
+-------------------------------
+
+Query Response
+
+{
+    "code": 404,
+    "message": "Корзина с id=3 не найдена"
+}
+
+===============================
+
+выгрузка из DB
+-------------------------------
+id,userId,deliveryPrice,deliveryPriceOur,deliveryTime,wareHouse,courierService,status,productsList,
+1,,0,30,25~30,Шведский дом,Привезём быстро,0,[id:4; quantity:1]
+2,,0,30,25~30,Шведский дом,Привезём быстро,0,[id:4; quantity:1]
+3,,0,30,25~30,Шведский дом,Привезём быстро,0,[id:1; quantity:1];[id:4; quantity:1]
+
+===============================
+
+Лог
+-------------------------------
+2025-02-08T07:40:11.181Z [DEBUG] [Main]: [Request] - ::ffff:127.0.0.1 DELETE:/api/v1/orders/3 - HTTP/1.1 -  - 
+2025-02-08T07:40:11.182Z [ERROR] [Main]: Unexpected error:
+2025-02-08T07:40:11.182Z [ERROR] [Main]: 	 {"stack":"NotFoundError: Корзина с id=3 не найдена\n    at OrderService.<anonymous> (/var/www/backend/packages/main/src/controllers/OrderService.ts:300:15)\n    at Generator.next (<anonymous>)\n    at /var/www/backend/packages/main/src/controllers/OrderService.ts:39:71\n    at new Promise (<anonymous>)\n    at __awaiter (/var/www/backend/packages/main/src/controllers/OrderService.ts:35:12)\n    at OrderService.removeOrder (/var/www/backend/packages/main/src/controllers/OrderService.ts:222:16)\n    at ServiceInvoker.<anonymous> (/var/www/backend/packages/main/node_modules/typescript-rest/src/server/service-invoker.ts:72:31)\n    at Generator.next (<anonymous>)\n    at /var/www/backend/packages/main/node_modules/typescript-rest/dist/server/service-invoker.js:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/var/www/backend/packages/main/node_modules/typescript-rest/dist/server/service-invoker.js:4:12)\n    at ServiceInvoker.callTargetEndPoint (/var/www/backend/packages/main/node_modules/typescript-rest/dist/server/service-invoker.js:64:16)\n    at ServiceInvoker.<anonymous> (/var/www/backend/packages/main/node_modules/typescript-rest/src/server/service-invoker.ts:29:24)\n    at Generator.next (<anonymous>)\n    at /var/www/backend/packages/main/node_modules/typescript-rest/dist/server/service-invoker.js:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/var/www/backend/packages/main/node_modules/typescript-rest/dist/server/service-invoker.js:4:12)\n    at ServiceInvoker.callService (/var/www/backend/packages/main/node_modules/typescript-rest/dist/server/service-invoker.js:28:16)\n    at ServerContainer.<anonymous> (/var/www/backend/packages/main/node_modules/typescript-rest/src/server/server-container.ts:323:34)\n    at Generator.next (<anonymous>)\n    at /var/www/backend/packages/main/node_modules/typescript-rest/dist/server/server-container.js:8:71\n    at new Promise (<anonymous>)","message":"Корзина с id=3 не найдена","name":"NotFoundError","statusCode":404}
+2025-02-08T07:40:11.183Z [DEBUG] [Main]: [Response Status] - /api/v1/orders/3 - 404 Not Found

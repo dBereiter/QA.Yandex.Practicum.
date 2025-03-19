@@ -1,0 +1,25 @@
+Query:
+
+curl --location 'https://783f4d3d-08f0-42d4-9e90-849ec806750c.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml' \
+--header 'Content-Type: application/xml' \
+--data '<InputModel>
+    <productsCount>11</productsCount>
+    <deliveryTime>13</deliveryTime>
+</InputModel>'
+
+===============================
+
+POST /fast-delivery/v3.1.1/calculate-delivery.xml
+
+-------------------------------
+500 Ok
+-------------------------------
+
+Query Response
+
+{
+    "code": 500,
+    "message": "Cannot read property '0' of undefined"
+}
+
+===============================

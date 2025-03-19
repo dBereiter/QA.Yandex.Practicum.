@@ -1,0 +1,33 @@
+Query:
+
+curl --location 'https://783f4d3d-08f0-42d4-9e90-849ec806750c.serverhub.praktikum-services.ru/fast-delivery/v3.1.1/calculate-delivery.xml' \
+--header 'Content-Type: application/xml' \
+--data '<InputModel>
+    <productsWeight>4</productsWeight>
+    <deliveryTime>13</deliveryTime>
+</InputModel>'
+
+===============================
+
+POST /fast-delivery/v3.1.1/calculate-delivery.xml
+
+-------------------------------
+500 Ok
+-------------------------------
+
+Query Response
+
+{
+    "code": 500,
+    "message": "Cannot read property '0' of undefined"
+}
+
+===============================
+
+Логи 
+
+2025-02-10T11:12:37.993Z [DEBUG] [Courier][fast-delivery]: [Request] - ::ffff:127.0.0.1 POST:/fast-delivery/v3.1.1/calculate-delivery.xml - HTTP/1.1 - application/xml - <InputModel>  <productsWeight>4</productsWeight>  <deliveryTime>13</deliveryTime>
+</InputModel>
+2025-02-10T11:12:37.993Z [ERROR] [Courier][fast-delivery]: Unexpected error:
+2025-02-10T11:12:37.993Z [ERROR] [Courier][fast-delivery]: 	 {"stack":"TypeError: Cannot read property '0' of undefined\n    at d.<anonymous> (/var/www/backend/packages/secondary/build/server.js:685:176405)\n    at Generator.next (<anonymous>)\n    at /var/www/backend/packages/secondary/build/server.js:685:175989\n    at new Promise (<anonymous>)\n    at a (/var/www/backend/packages/secondary/build/server.js:685:175734)\n    at d.calculateDelivery (/var/www/backend/packages/secondary/build/server.js:685:176271)\n    at t.ServiceInvoker.<anonymous> (/var/www/backend/packages/secondary/build/server.js:561:2921)\n    at Generator.next (<anonymous>)\n    at /var/www/backend/packages/secondary/build/server.js:561:1371\n    at new Promise (<anonymous>)\n    at r (/var/www/backend/packages/secondary/build/server.js:561:1116)\n    at t.ServiceInvoker.callTargetEndPoint (/var/www/backend/packages/secondary/build/server.js:561:2523)\n    at t.ServiceInvoker.<anonymous> (/var/www/backend/packages/secondary/build/server.js:561:1830)\n    at Generator.next (<anonymous>)\n    at /var/www/backend/packages/secondary/build/server.js:561:1371\n    at new Promise (<anonymous>)","message":"Cannot read property '0' of undefined"}
+2025-02-10T11:12:37.993Z [DEBUG] [Courier][fast-delivery]: [Response Status] - /fast-delivery/v3.1.1/calculate-delivery.xml - 500 Internal Server Error

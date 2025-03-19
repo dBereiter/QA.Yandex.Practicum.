@@ -1,0 +1,33 @@
+Query:
+
+curl --location 'https://ccc1407e-16f3-427b-a1f5-916ea5ec38f7.serverhub.praktikum-services.ru/api/v1/kits/8/products' \
+--header 'Content-Type: application/json' \
+--data '{
+    "productsList": []
+}'
+
+===============================
+
+POST /api/v1/kits/id/products
+
+-------------------------------
+500 Internal Server Error
+-------------------------------
+
+Query Response
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Error</title>
+</head>
+
+<body>
+    <pre>Internal Server Error</pre>
+</body>
+
+</html>
+
+===============================

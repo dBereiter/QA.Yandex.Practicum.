@@ -1,0 +1,39 @@
+Query:
+
+curl --location --request PUT 'https://71d143b7-db78-4ea3-848b-a0b0be43b0be.serverhub.praktikum-services.ru/api/v1/orders/2' \
+--header 'Content-Type: application/json' \
+--data '{
+    "productsList": []
+}'
+
+===============================
+
+Query Response
+
+--------------
+ 200 OK
+--------------
+
+{
+    "id": 2,
+    "userId": null,
+    "deliveryPrice": 0,
+    "deliveryPriceOur": 32,
+    "deliveryTime": "25~30",
+    "wareHouse": "Имеется всё",
+    "courierService": "Привезём быстро",
+    "status": 0,
+    "productsList": [
+        {
+            "id": 4,
+            "quantity": 1
+        }
+    ],
+    "productsCost": 178,
+    "finalCost": 178
+}
+
+===============================
+
+
+

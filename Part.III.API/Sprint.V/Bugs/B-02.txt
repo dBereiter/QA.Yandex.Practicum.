@@ -1,0 +1,4 @@
+Лог
+-------------------------------
+2025-02-07T14:19:01.873Z [DEBUG] [Main]: [Request] - ::ffff:127.0.0.1 PUT:/api/v1/orders/1 - HTTP/1.1 - application/json - {"productsList":[{"id":1}]}
+2025-02-07T14:19:01.905Z [DEBUG] [Main]: [Response Status] - /api/v1/orders/1 - 200 OK

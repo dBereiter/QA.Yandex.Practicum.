@@ -1,0 +1,29 @@
+Query:
+
+curl --location --request PUT 'https://def8d81c-c3a7-4b9a-9b71-563859a87ae5.serverhub.praktikum-services.ru/api/v1/orders/2' \
+--header 'Content-Type: application/json' \
+--data '{
+    "productsList": [
+        {
+            "quantity": 1
+        }
+    ]
+}'
+
+===============================
+
+Query Response
+
+--------------
+ 409 Conflict
+--------------
+
+{
+    "code": 409,
+    "message": "Нет склада, способного обработать Ваш заказ"
+}
+
+===============================
+
+
+

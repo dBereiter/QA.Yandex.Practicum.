@@ -1,0 +1,37 @@
+PUT /api/v1/orders/:id
+
+-------------------------------
+200 OK
+-------------------------------
+
+Query Response
+
+{
+    "id": 1,
+    "userId": null,
+    "deliveryPrice": 0,
+    "deliveryPriceOur": 30,
+    "deliveryTime": "25~30",
+    "wareHouse": "Шведский дом",
+    "courierService": "Привезём быстро",
+    "status": 0,
+    "productsList": [
+        {
+            "id": 4,
+            "quantity": 1
+        },
+        {
+            "id": 1,
+            "quantity": null
+        }
+    ],
+    "productsCost": 0,
+    "finalCost": 99
+}
+
+
+выгрузка из DB
+-------------------------------
+id,userId,deliveryPrice,deliveryPriceOur,deliveryTime,wareHouse,courierService,status,productsList,
+2,,0,30,25~30,Шведский дом,Привезём быстро,0,[id:4; quantity:1]
+1,,0,30,25~30,Шведский дом,Привезём быстро,0,[id:4; quantity:];[id:1; quantity:null]

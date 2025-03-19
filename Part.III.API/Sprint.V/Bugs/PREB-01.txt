@@ -1,0 +1,49 @@
+POST /api/v1/orders/
+
+-------------------------------
+201 Created
+-------------------------------
+
+Query Response
+
+{
+    "productsList": [
+        {
+            "id": 4,
+            "quantity": 1
+        }
+    ],
+    "status": 0,
+    "deliveryPriceOur": 30,
+    "deliveryTime": "25~30",
+    "courierService": "Привезём быстро",
+    "deliveryPrice": 0,
+    "wareHouse": "Шведский дом",
+    "userId": null,
+    "id": 2,
+    "productsCost": 0,
+    "finalCost": 99
+}
+
+
+===============================
+
+
+выгрузка и DB
+-------------------------------
+id,userId,deliveryPrice,deliveryPriceOur,deliveryTime,wareHouse,courierService,status,productsList,
+1,,0,30,25~30,Шведский дом,Привезём быстро,0,[id:4; quantity:1]
+2,,0,30,25~30,Шведский дом,Привезём быстро,0,[id:4; quantity:1]
+
+===============================
+
+
+Лог
+-------------------------------
+2025-02-07T12:05:06.233Z [DEBUG] [Main]: [Request] - ::ffff:127.0.0.1 POST:/api/v1/orders - HTTP/1.1 - application/json - {"productsList":[{"id":4,"quantity":1}]}
+2025-02-07T12:05:06.378Z [DEBUG] [Main]: [Response Status] - /api/v1/orders - 201 Created
+2025-02-07T12:09:22.059Z [DEBUG] [Main]: [Request] - ::ffff:127.0.0.1 GET:/api/db/resources/order_model.csv - HTTP/1.1 -  - 
+2025-02-07T12:09:22.066Z [DEBUG] [Main]: [Response Status] - /api/db/resources/order_model.csv - 200 OK
+2025-02-07T12:09:43.796Z [DEBUG] [Main]: [Request] - ::ffff:127.0.0.1 GET:/api/logs/main?count=200 - HTTP/1.1 -  - 
+
+===============================

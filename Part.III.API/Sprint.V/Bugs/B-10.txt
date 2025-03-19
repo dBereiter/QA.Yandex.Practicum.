@@ -1,0 +1,51 @@
+Query:
+
+curl --location --request PUT 'https://58cfd7a1-aca7-4a3a-a0e6-2b1e3f3ceff6.serverhub.praktikum-services.ru/api/v1/orders/2' \
+--header 'Content-Type: application/json' \
+--data '{
+    "productsList": [
+        {
+            "id": 35,
+            "quantity": null
+        }
+    ]
+}'
+
+===============================
+
+Query Response
+
+--------
+ 200 OK
+--------
+
+{
+    "id": 2,
+    "userId": null,
+    "deliveryPrice": 0,
+    "deliveryPriceOur": 38,
+    "deliveryTime": "25~30",
+    "wareHouse": "Имеется всё",
+    "courierService": "Чух-чух и уже у вас",
+    "status": 0,
+    "productsList": [
+        {
+            "id": 4,
+            "quantity": 1
+        },
+        {
+            "id": 35,
+            "quantity": null
+        }
+    ],
+    "productsCost": 178,
+    "finalCost": 178
+}
+
+===============================
+
+выгрузка из DB
+-------------------------------
+id,userId,deliveryPrice,deliveryPriceOur,deliveryTime,wareHouse,courierService,status,productsList,
+1,,0,30,25~30,Шведский дом,Привезём быстро,0,[id:4; quantity:1]
+2,,0,38,25~30,Имеется всё,Чух-чух и уже у вас,0,[id:4; quantity:1];[id:35; quantity:null]
